@@ -30,9 +30,9 @@ public class JDBC {
             try {
                 if (Desktop.isDesktopSupported())
                     if(connection.isRegistered(login.getTxt_user().getText(),String.valueOf(login.getTxt_pass().getPassword())))
-                        Desktop.getDesktop().browse(new URI("http://localhost/e_commerce/"+login.getTxt_user().getText()+".php"));
+                        Desktop.getDesktop().browse(new URI("http://localhost:8080/e_commerce/"+login.getTxt_user().getText()+".php"));
                 else
-                        Desktop.getDesktop().browse(new URI("http://localhost/e_commerce"));
+                        Desktop.getDesktop().browse(new URI("http://localhost:8080/e_commerce"));
             } catch (SQLException | URISyntaxException | IOException ex) {
                 System.err.println("Errore nel JDBC: "+ex);
             }
