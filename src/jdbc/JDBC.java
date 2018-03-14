@@ -20,7 +20,8 @@ public class JDBC {
     Driver connection;
     LoginFrame login;
     
-    public JDBC() throws SQLException{
+    public JDBC() throws SQLException,ClassNotFoundException{
+        Class.forName("com.mysql.jdbc.Driver"); 
         connection = new Driver("jdbc:mysql://localhost:3306/e_commerce","AlMax","");
         login = new LoginFrame();
     }
