@@ -14,7 +14,7 @@ public class Main {
             Driver connessione = commerce.getConnection();
             LoginFrame log = commerce.getLogin();
             commerce.access_responsabili();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.err.println("Errore:"+e);
         }       
     } 
